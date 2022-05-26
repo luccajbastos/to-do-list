@@ -31,5 +31,10 @@ function process(){
     }
 }
 inputBotao.addEventListener('click', () => {
-    process();
+    if(tarefasAdicionadas.length <= 15){
+        process();
+    } else {
+        showError("Máximo de tarefas atingido!")
+    }
+    
 });
